@@ -1,0 +1,31 @@
+{
+  "name": "c5-project--summit",
+  "version": "1.0.0",
+  "description": "Cypress Cucumber Automation Framework   ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Femi Adeyinka",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.8.0",
+    "esbuild": "^0.20.2",
+    "ts-loader": "^9.5.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.{js,ts}",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-ndjson/cucumber-report.ndjson"
+    }
+
+  }
+}
+
